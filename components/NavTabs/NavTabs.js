@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Tabs, Tab, Box, Typography } from "@mui/material";
+import { useTheme } from "@mui/material";
 
 function LinkTab({ href, value, label, onChange }) {
+  const theme = useTheme();
   return (
     <Tab
       onClick={(event) => {
@@ -13,7 +15,13 @@ function LinkTab({ href, value, label, onChange }) {
       onChange={onChange}
       style={{ textTransform: "none" }}
       label={
-        <Link href={href} style={{ textDecoration: "none", color: "white" }}>
+        <Link
+          href={href}
+          style={{
+            textDecoration: "none",
+            color: theme.palette.text.primary,
+          }}
+        >
           <Typography>{label}</Typography>
         </Link>
       }

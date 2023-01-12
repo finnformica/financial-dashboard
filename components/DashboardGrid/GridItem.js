@@ -1,13 +1,17 @@
+import { useTheme } from "@emotion/react";
 import { Box } from "@mui/material";
+import { borderColor } from "@mui/system";
 
 const GridItem = ({ gridArea, children }) => {
+  const theme = useTheme();
   return (
     <Box
       sx={{
         p: 1,
-        borderRadius: 2,
+        borderRadius: theme.shape.borderRadius,
         gridArea: gridArea,
-        bgcolor: "primary.main",
+        backgroundColor: theme.palette.background.light,
+        border: `1.5px ${theme.palette.background.border} solid`,
       }}
     >
       {children}

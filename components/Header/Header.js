@@ -42,12 +42,19 @@ const Header = () => {
           backgroundColor: theme.palette.background.light,
           borderBottom: 1.5,
           borderColor: theme.palette.background.border,
+          minWidth: "640px",
         }}
         elevation={0}
       >
         <Toolbar sx={{ height: 70 }}>
           <IconButton aria-label="rocket ship logo" color="inherit">
-            <Link href="/" style={{ textDecoration: "none", color: "white" }}>
+            <Link
+              href="/"
+              style={{
+                textDecoration: "none",
+                color: theme.palette.text.primary,
+              }}
+            >
               <RocketRoundedIcon />
             </Link>
           </IconButton>

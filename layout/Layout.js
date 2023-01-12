@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
   const theme = useTheme();
 
   return (
-    <>
+    <div style={{ minWidth: "720px" }}>
       <Header />
 
       {/* push content below navbar */}
@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
           {children}
         </Container>
       </main>
-    </>
+    </div>
   );
 };
 

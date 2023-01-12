@@ -16,78 +16,8 @@ export default function Home() {
   return (
     <>
       <GridContainer>
-        {/* <Box
-          sx={{
-            p: 1,
-            borderRadius: 2,
-            gridArea: "banner",
-            bgcolor: "primary.main",
-          }}
-        >
-          Banner
-        </Box>
-        <Box
-          sx={{
-            p: 1,
-            borderRadius: 2,
-            gridArea: "chart",
-            bgcolor: "secondary.main",
-          }}
-        >
-          Chart
-        </Box>
-        <Box
-          sx={{
-            p: 1,
-            borderRadius: 2,
-            gridArea: "buy",
-            bgcolor: "success.main",
-          }}
-        >
-          Buy
-        </Box>
-        <Box
-          sx={{
-            p: 1,
-            borderRadius: 2,
-            gridArea: "sell",
-            bgcolor: "error.main",
-          }}
-        >
-          Sell
-        </Box>
-        <Box
-          sx={{
-            p: 1,
-            borderRadius: 2,
-            gridArea: "prices",
-            bgcolor: "warning.dark",
-          }}
-        >
-          Prices
-        </Box>
-        <Box
-          sx={{
-            p: 1,
-            borderRadius: 2,
-            gridArea: "summary",
-            bgcolor: "info.dark",
-          }}
-        >
-          Summary
-        </Box>
-        <Box
-          sx={{
-            p: 1,
-            borderRadius: 2,
-            gridArea: "history",
-            bgcolor: "info.main",
-          }}
-        >
-          History
-        </Box> */}
         {gridAreas.map((name) => (
-          <GridItem gridArea={name}>{name}</GridItem>
+          <GridItem gridArea={name}></GridItem>
         ))}
       </GridContainer>
     </>
