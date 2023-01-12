@@ -60,7 +60,7 @@ const Header = () => {
           >
             <NavTabs />
           </Box>
-          <div>
+          <Box>
             <IconButton aria-label="settings of current user" color="inherit">
               <SettingsIcon />
             </IconButton>
@@ -92,7 +92,7 @@ const Header = () => {
               <MenuItem onClick={handleClose}>Profile</MenuItem>
               <MenuItem onClick={handleClose}>My account</MenuItem>
             </Menu>
-          </div>
+          </Box>
         </Toolbar>
       </AppBar>
     </Box>

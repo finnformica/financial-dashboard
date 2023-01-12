@@ -12,7 +12,11 @@ const Layout = ({ children }) => {
       {/* push content below navbar */}
       <div style={{ height: theme.mixins.toolbar.minHeight }}></div>
       <main>
-        <Container maxWidth={false} sx={{ py: 2 }}>
+        <Container
+          maxWidth={false}
+          disableGutters={true}
+          sx={{ pt: 4, pb: 2.5, px: 3 }}
+        >
           {children}
         </Container>
       </main>
