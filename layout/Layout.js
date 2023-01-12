@@ -1,5 +1,4 @@
-import { useTheme } from "@emotion/react";
-import { Container } from "@mui/material";
+import { Container, useTheme } from "@mui/material";
 import Header from "../components/Header/Header";
 
 const Layout = ({ children }) => {

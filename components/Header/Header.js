@@ -7,13 +7,11 @@ import {
   Menu,
   MenuItem,
   Box,
-  Tabs,
-  Tab,
+  useTheme,
 } from "@mui/material";
 import SettingsIcon from "@mui/icons-material/Settings";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import RocketRoundedIcon from "@mui/icons-material/RocketRounded";
-import { useTheme } from "@emotion/react";
 import Link from "next/link";
 import NavTabs from "../NavTabs/NavTabs";
 

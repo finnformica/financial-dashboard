@@ -1,6 +1,4 @@
-import { useTheme } from "@emotion/react";
-import { Box } from "@mui/material";
-import { borderColor } from "@mui/system";
+import { Box, useTheme } from "@mui/material";
 
 const GridItem = ({ gridArea, children }) => {
   const theme = useTheme();
