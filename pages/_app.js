@@ -9,6 +9,12 @@ const theme = createTheme({
     primary: {
       main: "#E24680",
     },
+    success: {
+      main: "#0BA57E",
+    },
+    warning: {
+      main: "#AF3957",
+    },
     background: {
       main: "#151517",
       light: "#181920",
