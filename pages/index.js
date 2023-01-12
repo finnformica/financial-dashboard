@@ -17,7 +17,7 @@ export default function Home() {
     <>
       <GridContainer>
         {gridAreas.map((name, id) => (
-          <GridItem gridArea={name} id={id}></GridItem>
+          <GridItem gridArea={name} key={id}></GridItem>
         ))}
       </GridContainer>
     </>
