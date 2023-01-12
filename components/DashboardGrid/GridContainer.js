@@ -5,7 +5,7 @@ const GridContainer = styled("div")(({ theme }) => ({
   [theme.breakpoints.up("xs")]: {
     display: "grid",
     gridTemplateColumns: "1fr 1fr",
-    gridTemplateRows: "1.5fr 10fr 4fr 4fr 4fr 6fr",
+    gridTemplateRows: "1fr 10fr 4fr 4fr 4fr 6fr",
     gridTemplateAreas: `
             "banner banner"
             "chart chart"
@@ -21,7 +21,7 @@ const GridContainer = styled("div")(({ theme }) => ({
   [theme.breakpoints.up("md")]: {
     display: "grid",
     gridTemplateColumns: "2fr 3fr 3fr",
-    gridTemplateRows: "1.5fr 10fr 4fr 7fr",
+    gridTemplateRows: "1fr 10fr 4fr 7fr",
     gridTemplateAreas: `
         "prices banner banner"
         "prices chart chart"
@@ -35,7 +35,7 @@ const GridContainer = styled("div")(({ theme }) => ({
   [theme.breakpoints.up("xl")]: {
     display: "grid",
     gridTemplateColumns: "2fr 7fr 2fr",
-    gridTemplateRows: "1.5fr 4fr 6.2fr 6fr",
+    gridTemplateRows: "1fr 4fr 6.2fr 6fr",
     gridTemplateAreas: `
     "prices banner buy"
     "prices chart buy"
