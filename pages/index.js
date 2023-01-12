@@ -1,23 +1,26 @@
-import { Box, useTheme } from "@mui/material";
+import { useTheme } from "@mui/material";
 import GridContainer from "../components/DashboardGrid/GridContainer";
 import GridItem from "../components/DashboardGrid/GridItem";
+import Banner from "../components/Banner/Banner";
 
 export default function Home() {
-  const theme = useTheme();
+  // const theme = useTheme();
   const gridAreas = [
-    "banner",
-    "chart",
-    "buy",
-    "sell",
-    "prices",
-    "summary",
-    "history",
+    { name: "banner", element: <Banner /> },
+    { name: "chart", element: <div></div> },
+    { name: "buy", element: <div></div> },
+    { name: "sell", element: <div></div> },
+    { name: "prices", element: <div></div> },
+    { name: "summary", element: <div></div> },
+    { name: "history", element: <div></div> },
   ];
   return (
     <>
       <GridContainer>
-        {gridAreas.map((name, id) => (
-          <GridItem gridArea={name} key={id}></GridItem>
+        {gridAreas.map((gridItem, id) => (
+          <GridItem gridArea={gridItem.name} key={id}>
+            {gridItem.element}
+          </GridItem>
         ))}
       </GridContainer>
     </>
