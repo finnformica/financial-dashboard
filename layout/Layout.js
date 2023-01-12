@@ -1,4 +1,5 @@
 import { useTheme } from "@emotion/react";
+import { Container } from "@mui/material";
 import Header from "../components/Header/Header";
 
 const Layout = ({ children }) => {
@@ -7,10 +8,13 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header />
+
+      {/* push content below navbar */}
+      <div style={{ height: theme.mixins.toolbar.minHeight }}></div>
       <main>
-        {/* push content below navbar */}
-        <div style={{ height: theme.mixins.toolbar.minHeight }}></div>
-        {children}
+        <Container maxWidth={false} sx={{ py: 2 }}>
+          {children}
+        </Container>
       </main>
     </>
   );
