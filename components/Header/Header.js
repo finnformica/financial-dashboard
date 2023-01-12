@@ -17,6 +17,12 @@ import { useTheme } from "@emotion/react";
 import Link from "next/link";
 import NavTabs from "../NavTabs/NavTabs";
 
+// make labels white
+// push indicator down to border
+// link toggle behaviour to url
+// store state in localStorage
+// add padding between tabs
+
 const Header = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const theme = useTheme();
