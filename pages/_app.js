@@ -1,7 +1,7 @@
 import { useState, useMemo } from "react";
 import { createTheme, ThemeProvider } from "@mui/material";
+
 import Layout from "../layout/Layout";
-import "../styles/globals.css";
 import { getDesignTokens } from "../theme/theme";
 import MetaTags from "../components/MetaTags/MetaTags";
 
