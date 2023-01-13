@@ -14,12 +14,7 @@ const Layout = ({ setMode, mode, children }) => {
         <Container
           maxWidth={false}
           disableGutters={true}
-          sx={{
-            pt: 4,
-            pb: 2.5,
-            px: 3,
-            backgroundColor: theme.palette.background.main,
-          }}
+          sx={{ pt: 4, pb: 2.5, px: 3 }}
         >
           {children}
         </Container>

@@ -48,4 +48,13 @@ export const getDesignTokens = (mode) => ({
   typography: {
     fontFamily: "Rubik, sans-serif",
   },
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          backgroundColor: mode === "dark" ? "#151517" : "#F6F7FB",
+        },
+      },
+    },
+  },
 });

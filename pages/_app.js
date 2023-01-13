@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { createTheme, ThemeProvider } from "@mui/material";
+import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 
 import Layout from "../layout/Layout";
 import { getDesignTokens } from "../theme/theme";
@@ -14,6 +14,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <MetaTags />
       <ThemeProvider theme={theme}>
+        <CssBaseline />
         <Layout setMode={setMode} mode={mode}>
           <Component {...pageProps} />
         </Layout>
