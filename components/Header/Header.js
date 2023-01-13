@@ -12,6 +12,8 @@ import {
 import SettingsIcon from "@mui/icons-material/Settings";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import RocketRoundedIcon from "@mui/icons-material/RocketRounded";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
+import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import Link from "next/link";
 import NavTabs from "../NavTabs/NavTabs";
 
@@ -21,7 +23,7 @@ import NavTabs from "../NavTabs/NavTabs";
 // store state in localStorage
 // add padding between tabs
 
-const Header = () => {
+const Header = ({ setMode, mode }) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const theme = useTheme();
 
@@ -31,6 +33,10 @@ const Header = () => {
 
   const handleClose = () => {
     setAnchorEl(null);
+  };
+
+  const handleModeToggle = () => {
+    setMode(mode === "dark" ? "light" : "dark");
   };
 
   return (
@@ -45,18 +51,20 @@ const Header = () => {
         elevation={0}
       >
         <Toolbar sx={{ height: 70 }}>
-          <IconButton aria-label="rocket ship logo" color="inherit">
+          <IconButton aria-label="rocket ship logo">
             <Link
               href="/"
               style={{
                 textDecoration: "none",
-                color: theme.palette.text.primary,
+                color: theme.palette.primary.main,
               }}
             >
               <RocketRoundedIcon />
             </Link>
           </IconButton>
-          <Typography variant="h6">Cryptoslash</Typography>
+          <Typography color={theme.palette.text.default} variant="h6">
+            Cryptoslash
+          </Typography>
           <Box
             sx={{
               flexGrow: 1,
@@ -66,8 +74,20 @@ const Header = () => {
             <NavTabs />
           </Box>
           <Box>
-            <IconButton aria-label="settings of current user" color="inherit">
-              <SettingsIcon />
+            <IconButton
+              aria-label="dark mode toggle"
+              onClick={handleModeToggle}
+            >
+              {mode === "dark" ? (
+                <DarkModeOutlinedIcon
+                  sx={{ color: theme.palette.text.default }}
+                />
+              ) : (
+                <DarkModeIcon sx={{ color: theme.palette.text.default }} />
+              )}
+            </IconButton>
+            <IconButton aria-label="settings of current user">
+              <SettingsIcon sx={{ color: theme.palette.text.default }} />
             </IconButton>
 
             <IconButton
@@ -75,9 +95,8 @@ const Header = () => {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleMenu}
-              color="inherit"
             >
-              <AccountCircle />
+              <AccountCircle sx={{ color: theme.palette.text.default }} />
             </IconButton>
             <Menu
               id="menu-appbar"

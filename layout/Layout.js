@@ -1,12 +1,12 @@
 import { Container, useTheme } from "@mui/material";
 import Header from "../components/Header/Header";
 
-const Layout = ({ children }) => {
+const Layout = ({ setMode, mode, children }) => {
   const theme = useTheme();
 
   return (
     <div style={{ minWidth: "720px" }}>
-      <Header />
+      <Header setMode={setMode} mode={mode} />
 
       {/* push content below navbar */}
       <div style={{ height: theme.mixins.toolbar.minHeight }}></div>
@@ -14,7 +14,12 @@ const Layout = ({ children }) => {
         <Container
           maxWidth={false}
           disableGutters={true}
-          sx={{ pt: 4, pb: 2.5, px: 3 }}
+          sx={{
+            pt: 4,
+            pb: 2.5,
+            px: 3,
+            backgroundColor: theme.palette.background.main,
+          }}
         >
           {children}
         </Container>
