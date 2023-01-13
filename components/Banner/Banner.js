@@ -1,4 +1,5 @@
 import { Box, Typography } from "@mui/material";
+import { exampleBannerData } from "./exampleBannerData";
 
 const bannerItems = [
   { heading: "Coin", slug: "coin" },
@@ -8,15 +9,6 @@ const bannerItems = [
   { heading: "24h High", slug: "high" },
   { heading: "24h Low", slug: "low" },
 ];
-
-const exampleBannerData = {
-  coin: "BTC",
-  price: "$18,846.88",
-  change: "+7.4%",
-  volume: "$50,026,356,915",
-  high: "$18,989.18",
-  low: "$17,529.74",
-};
 
 const BannerItem = (props) => {
   <Box>
