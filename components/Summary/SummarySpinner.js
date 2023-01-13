@@ -8,27 +8,23 @@ import {
 import ArrowCircleUpRoundedIcon from "@mui/icons-material/ArrowCircleUpRounded";
 import ArrowCircleDownRoundedIcon from "@mui/icons-material/ArrowCircleDownRounded";
 
-const SummarySpinner = ({ mode, value }) => {
+const SummarySpinner = ({ mode, value, percent }) => {
   const theme = useTheme();
   return (
     <Box sx={{ position: "relative", textAlign: "center" }}>
-      {mode === "earnings" ? (
-        <ArrowCircleUpRoundedIcon sx={{ color: theme.palette.success.main }} />
-      ) : (
-        <ArrowCircleDownRoundedIcon
-          sx={{ color: theme.palette.warning.main }}
-        />
-      )}
+      <Typography variant="caption" component="div" color="text.secondary">
+        {`${Math.round(percent)}%`}
+      </Typography>
 
       <CircularProgress
         size={68}
         variant="determinate"
-        value={75}
+        value={percent}
         color={mode === "earnings" ? "success" : "warning"}
         sx={{
           position: "absolute",
-          top: -22,
-          left: -22,
+          top: -24,
+          left: -23,
           zIndex: 1,
         }}
       />

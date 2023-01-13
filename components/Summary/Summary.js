@@ -1,4 +1,4 @@
-import { Box, Typography, useTheme } from "@mui/material";
+import { Box, Typography, useTheme, IconButton } from "@mui/material";
 import RefreshRoundedIcon from "@mui/icons-material/RefreshRounded";
 import SummarySpinner from "./SummarySpinner";
 
@@ -11,25 +11,21 @@ const Summary = () => {
         <Typography sx={{ flex: 1 }} variant="h6">
           Trade overview
         </Typography>
-        <RefreshRoundedIcon sx={{ color: theme.palette.text.default }} />
-      </Box>
-      <Box sx={{ display: "flex" }}>
-        {/* <Typography fontWeight={500}>1.4356234</Typography>{" "}
-        <Typography variant="caption" color="grey.500">
-          BTC
-        </Typography> */}
+        <IconButton aria-label="refresh price feed" sx={{ p: 0, px: 0.5 }}>
+          <RefreshRoundedIcon sx={{ color: theme.palette.text.default }} />
+        </IconButton>
       </Box>
       <Box
         sx={{
           display: "flex",
           justifyContent: "space-around",
-          mt: { xs: 2, lg: 5 },
+          mt: { xs: 4, lg: 6.5 },
           textAlign: "center",
           alignItems: "center",
         }}
       >
-        <SummarySpinner mode="earnings" value={31432.01} />
-        <SummarySpinner mode="losses" value={-22387.45} />
+        <SummarySpinner mode="earnings" value={31842.01} percent={90} />
+        <SummarySpinner mode="losses" value={-2287.45} percent={13} />
       </Box>
     </Box>
   );
