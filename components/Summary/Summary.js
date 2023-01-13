@@ -19,7 +19,7 @@ const Summary = () => {
         sx={{
           display: "flex",
           justifyContent: "space-around",
-          mt: { xs: 4, lg: 6.5 },
+          mt: { xs: 3.5, lg: 7.7 },
           textAlign: "center",
           alignItems: "center",
         }}

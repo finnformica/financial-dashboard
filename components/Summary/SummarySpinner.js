@@ -12,7 +12,7 @@ const SummarySpinner = ({ mode, value, percent }) => {
   const theme = useTheme();
   return (
     <Box sx={{ position: "relative", textAlign: "center" }}>
-      <Typography variant="caption" component="div" color="text.secondary">
+      <Typography variant="caption" component="div" color="grey.500">
         {`${Math.round(percent)}%`}
       </Typography>
 

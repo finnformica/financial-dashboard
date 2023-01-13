@@ -17,8 +17,8 @@ export const examplePriceFeedData = [
     coin: "Binance Coin",
     ticker: "BNB",
     change: 1314,
-    percent: 0.3,
-    price: "18846.88",
+    percent: 2.1,
+    price: "293.42",
   },
   {
     coin: "XRP",

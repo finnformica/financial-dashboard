@@ -62,7 +62,7 @@ export const getDesignTokens = (mode) => ({
           transition: "all 0.3s ease-in-out",
         },
         div: {
-          transition: "all 0.3s linear",
+          transition: "all 0.3s ease-in-out",
         },
       },
     },
