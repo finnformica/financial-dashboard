@@ -1,4 +1,10 @@
-import { Box, Typography, TextField, Button } from "@mui/material";
+import {
+  Box,
+  Typography,
+  TextField,
+  Button,
+  InputAdornment,
+} from "@mui/material";
 import React from "react";
 
 const BuySell = ({ mode }) => {
@@ -13,6 +19,10 @@ const BuySell = ({ mode }) => {
         label="Price"
         variant="outlined"
         color={mode === "buy" ? "secondary" : "primary"}
+        // size="small"
+        InputProps={{
+          startAdornment: <InputAdornment position="start">$</InputAdornment>,
+        }}
       />
       <TextField
         sx={{ my: 1, width: "100%" }}
@@ -20,6 +30,10 @@ const BuySell = ({ mode }) => {
         label="Amount"
         variant="outlined"
         color={mode === "buy" ? "secondary" : "primary"}
+        // size="small"
+        InputProps={{
+          endAdornment: <InputAdornment position="end">BTC</InputAdornment>,
+        }}
       />
       <Button
         variant="contained"

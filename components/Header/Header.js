@@ -34,11 +34,9 @@ const Header = ({ setMode, mode }) => {
         elevation={0}
       >
         <Toolbar sx={{ height: 70 }}>
-          <IconButton aria-label="rocket ship logo">
+          <IconButton aria-label="rocket ship logo" sx={{ mt: 0.5 }}>
             <Link href="/" style={{ textDecoration: "none" }}>
-              <RocketRoundedIcon
-                sx={{ color: theme.palette.primary.main, mt: 0.5 }}
-              />
+              <RocketRoundedIcon sx={{ color: theme.palette.primary.main }} />
             </Link>
           </IconButton>
           <Typography color={theme.palette.text.default} variant="h5">

@@ -14,14 +14,18 @@ const RowItem = ({ coin, ticker, percent, price }) => {
           flexDirection: { xs: "column", lg: "row" },
         }}
       >
-        <Typography>{ticker}</Typography>
+        <Typography fontSize={14}>{ticker}</Typography>
         {percent >= 0 ? (
           <>
-            <Typography color="success.main">+{percent}%</Typography>
+            <Typography fontSize={14} color="success.main">
+              +{percent}%
+            </Typography>
           </>
         ) : (
           <>
-            <Typography color="warning.main">-{percent * -1}%</Typography>
+            <Typography fontSize={14} color="warning.main">
+              -{percent * -1}%
+            </Typography>
           </>
         )}
         <Typography>${price}</Typography>
