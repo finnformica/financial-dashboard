@@ -3,6 +3,9 @@ const darkTheme = {
   primary: {
     main: "#E24680",
   },
+  secondary: {
+    main: "#0586C6",
+  },
   background: {
     main: "#151517",
     light: "#181920",
