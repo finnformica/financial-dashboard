@@ -1,14 +1,5 @@
 import { Box, Typography } from "@mui/material";
 
-// const bannerItems = [
-//   "Coin",
-//   "Price",
-//   "Change",
-//   "24h Volume",
-//   "24h High",
-//   "24h Low",
-// ];
-
 const bannerItems = [
   { heading: "Coin", slug: "coin" },
   { heading: "Price", slug: "price" },
@@ -47,7 +38,7 @@ const Banner = () => {
     >
       {bannerItems.map((item, id) => (
         <Box key={id}>
-          <Typography variant="subtitle1" color="grey.400" fontSize={12}>
+          <Typography variant="subtitle1" color="grey.500" fontSize={12}>
             {item.heading}
           </Typography>
           <Typography
