@@ -18,7 +18,7 @@ const GridContainer = styled("div")(({ theme }) => ({
     height: "150vh",
   },
 
-  [theme.breakpoints.up("md")]: {
+  [theme.breakpoints.up("lg")]: {
     display: "grid",
     gridTemplateColumns: "2fr 3fr 3fr",
     gridTemplateRows: "1fr 10fr 4fr 7fr",

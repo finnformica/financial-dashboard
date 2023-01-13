@@ -1,19 +1,17 @@
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import RefreshRoundedIcon from "@mui/icons-material/RefreshRounded";
-import ArrowCircleUpRoundedIcon from "@mui/icons-material/ArrowCircleUpRounded";
-import ArrowCircleDownRoundedIcon from "@mui/icons-material/ArrowCircleDownRounded";
 
 import { examplePriceFeedData } from "./examplePriceFeedData";
 
 const RowItem = ({ coin, ticker, percent, price }) => {
   const theme = useTheme();
   return (
-    <Box sx={{ my: { xs: 0, md: 2 } }}>
+    <Box sx={{ my: { xs: 0, lg: 2 } }}>
       <Box
         sx={{
           display: "flex",
           justifyContent: "space-between",
-          flexDirection: { xs: "column", md: "row" },
+          flexDirection: { xs: "column", lg: "row" },
         }}
       >
         <Typography>{ticker}</Typography>
@@ -51,12 +49,13 @@ const PriceFeed = () => {
       <Box
         sx={{
           display: "flex",
-          flexDirection: { xs: "row", md: "column" },
+          flexDirection: { xs: "row", lg: "column" },
           justifyContent: "space-between",
         }}
       >
         {examplePriceFeedData.map((item, id) => (
           <RowItem
+            key={id}
             coin={item.coin}
             ticker={item.ticker}
             change={item.change}
