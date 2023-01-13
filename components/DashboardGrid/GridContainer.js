@@ -25,8 +25,8 @@ const GridContainer = styled("div")(({ theme }) => ({
     gridTemplateAreas: `
         "prices banner banner"
         "prices chart chart"
-        "prices buy sell"
-        "summary history history"
+        "summary buy sell"
+        "history history history"
         `,
     gap: theme.spacing(2.5),
     height: "120vh",
