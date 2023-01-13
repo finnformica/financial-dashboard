@@ -27,16 +27,19 @@ const lightTheme = {
   primary: {
     main: "#E24680",
   },
+  secondary: {
+    main: "#0586C6",
+  },
   background: {
     main: "#F6F7FB",
     light: "#FFF",
     border: "#FFF",
   },
   success: {
-    main: "#0BBF91",
+    main: "#08D69F",
   },
   warning: {
-    main: "#F27593",
+    main: "#F04770",
   },
   text: {
     default: "#000",
