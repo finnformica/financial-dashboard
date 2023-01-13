@@ -13,16 +13,16 @@ function LinkTab({ href, value, label, onChange }) {
       disableRipple={true}
       value={value}
       onChange={onChange}
-      style={{ textTransform: "none" }}
+      sx={{ textTransform: "none", mt: "12px" }}
       label={
         <Link
           href={href}
           style={{
             textDecoration: "none",
-            color: theme.palette.text.primary,
+            color: theme.palette.text.default,
           }}
         >
-          <Typography>{label}</Typography>
+          <Typography color={theme.palette.text.default}>{label}</Typography>
         </Link>
       }
     />
@@ -30,6 +30,7 @@ function LinkTab({ href, value, label, onChange }) {
 }
 
 export default function NavTabs() {
+  const theme = useTheme();
   const [value, setValue] = useState(0);
   const [hasMounted, setHasMounted] = useState(false);
 
@@ -44,7 +45,12 @@ export default function NavTabs() {
 
   return (
     <Box>
-      <Tabs value={value} onChange={handleChange} aria-label="nav tabs">
+      <Tabs
+        sx={{ height: "73px" }}
+        value={value}
+        onChange={handleChange}
+        aria-label="nav tabs"
+      >
         <LinkTab label="Dashboard" href="/" />
         <LinkTab label="Payment" href="/payment" />
         <LinkTab label="Trade" href="/trade" />

@@ -52,17 +52,13 @@ const Header = ({ setMode, mode }) => {
       >
         <Toolbar sx={{ height: 70 }}>
           <IconButton aria-label="rocket ship logo">
-            <Link
-              href="/"
-              style={{
-                textDecoration: "none",
-                color: theme.palette.primary.main,
-              }}
-            >
-              <RocketRoundedIcon />
+            <Link href="/" style={{ textDecoration: "none" }}>
+              <RocketRoundedIcon
+                sx={{ color: theme.palette.primary.main, mt: 0.5 }}
+              />
             </Link>
           </IconButton>
-          <Typography color={theme.palette.text.default} variant="h6">
+          <Typography color={theme.palette.text.default} variant="h5">
             Cryptoslash
           </Typography>
           <Box
