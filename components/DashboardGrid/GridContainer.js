@@ -2,6 +2,8 @@ import { styled } from "@mui/material/styles";
 
 const GridContainer = styled("div")(({ theme }) => ({
   minWidth: "720px",
+  transition: "0.5s",
+  transitionTimingFunction: theme.transitions.easing.easeIn,
   [theme.breakpoints.up("xs")]: {
     display: "grid",
     gridTemplateColumns: "1fr 1fr",

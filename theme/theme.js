@@ -59,6 +59,10 @@ export const getDesignTokens = (mode) => ({
       styleOverrides: {
         body: {
           backgroundColor: mode === "dark" ? "#151517" : "#F6F7FB",
+          transition: "all 0.3s ease-in-out",
+        },
+        div: {
+          transition: "all 0.3s linear",
         },
       },
     },
