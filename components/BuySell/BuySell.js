@@ -27,7 +27,7 @@ const BuySell = ({ mode }) => {
           background:
             mode === "buy"
               ? "linear-gradient(to right top, #02C5A8, #0765D5)"
-              : "linear-gradient(to right top, #EB4774, #C047AF)",
+              : "linear-gradient(to right top, #EB4774, #BF48AF)",
           width: "100%",
           borderRadius: 2,
           textTransform: "none",
