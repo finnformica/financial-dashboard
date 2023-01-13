@@ -8,8 +8,14 @@ import { examplePriceFeedData } from "./examplePriceFeedData";
 const RowItem = ({ coin, ticker, percent, price }) => {
   const theme = useTheme();
   return (
-    <Box sx={{ my: 4 }}>
-      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+    <Box sx={{ my: { xs: 0, md: 2 } }}>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          flexDirection: { xs: "column", md: "row" },
+        }}
+      >
         <Typography>{ticker}</Typography>
         {percent >= 0 ? (
           <>
@@ -38,11 +44,17 @@ const PriceFeed = () => {
         <Typography variant="h6" sx={{ flex: 1 }}>
           Coins
         </Typography>
-        <IconButton sx={{ p: 0, px: 0.5 }}>
+        <IconButton aria-label="refresh price feed" sx={{ p: 0, px: 0.5 }}>
           <RefreshRoundedIcon sx={{ color: theme.palette.text.default }} />
         </IconButton>
       </Box>
-      <Box>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "row", md: "column" },
+          justifyContent: "space-between",
+        }}
+      >
         {examplePriceFeedData.map((item, id) => (
           <RowItem
             coin={item.coin}
