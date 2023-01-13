@@ -3,6 +3,7 @@ import GridItem from "../components/DashboardGrid/GridItem";
 import Banner from "../components/Banner/Banner";
 import BuySell from "../components/BuySell/BuySell";
 import PriceFeed from "../components/PriceFeed/PriceFeed";
+import Summary from "../components/Summary/Summary";
 
 export default function Home() {
   const gridAreas = [
@@ -11,7 +12,7 @@ export default function Home() {
     { name: "buy", element: <BuySell mode="buy" /> },
     { name: "sell", element: <BuySell mode="sell" /> },
     { name: "prices", element: <PriceFeed /> },
-    { name: "summary", element: <div></div> },
+    { name: "summary", element: <Summary /> },
     { name: "history", element: <div></div> },
   ];
   return (
