@@ -44,7 +44,12 @@ export default function NavTabs() {
   };
 
   return (
-    <Box>
+    <Box
+      sx={{
+        flexGrow: 1,
+        pl: "5%",
+      }}
+    >
       <Tabs
         sx={{ height: "73px" }}
         value={value}
