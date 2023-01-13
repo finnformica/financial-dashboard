@@ -43,15 +43,28 @@ const SummarySpinner = ({ mode, value }) => {
       >
         {mode === "earnings" ? "Earnings" : "Losses"}
       </Typography>
-      <Typography
-        sx={{
-          position: "absolute",
-          top: { xs: 10, lg: 85 },
-          left: { xs: 70, lg: -30 },
-        }}
-      >
-        $31,452.08
-      </Typography>
+
+      {value >= 0 ? (
+        <Typography
+          sx={{
+            position: "absolute",
+            top: { xs: 10, lg: 85 },
+            left: { xs: 70, lg: -30 },
+          }}
+        >
+          ${value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+        </Typography>
+      ) : (
+        <Typography
+          sx={{
+            position: "absolute",
+            top: { xs: 10, lg: 85 },
+            left: { xs: 70, lg: -30 },
+          }}
+        >
+          -${(value * -1).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+        </Typography>
+      )}
     </Box>
   );
 };

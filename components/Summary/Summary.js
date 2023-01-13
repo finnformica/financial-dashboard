@@ -28,8 +28,8 @@ const Summary = () => {
           alignItems: "center",
         }}
       >
-        <SummarySpinner mode="earnings" />
-        <SummarySpinner mode="losses" />
+        <SummarySpinner mode="earnings" value={31432.01} />
+        <SummarySpinner mode="losses" value={-22387.45} />
       </Box>
     </Box>
   );
