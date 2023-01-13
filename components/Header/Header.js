@@ -29,7 +29,7 @@ const Header = ({ setMode, mode }) => {
           backgroundColor: theme.palette.background.light,
           borderBottom: 1.5,
           borderColor: theme.palette.background.border,
-          minWidth: "640px",
+          minWidth: "680px",
         }}
         elevation={0}
       >
