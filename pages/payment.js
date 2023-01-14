@@ -2,6 +2,7 @@ import {
   Container,
   Typography,
   Box,
+  Paper,
   Button,
   useTheme,
   TextField,
@@ -22,7 +23,7 @@ const PaymentPage = () => {
         height: "80vh",
       }}
     >
-      <Box
+      <Paper
         sx={{
           p: 4,
           borderRadius: theme.shape.borderRadius,
@@ -31,6 +32,7 @@ const PaymentPage = () => {
           height: "500px",
           width: "500px",
         }}
+        elevation={theme.palette.mode === "light" ? 4 : 0}
       >
         <Typography variant="h4" color="text.default">
           Payment
@@ -72,7 +74,7 @@ const PaymentPage = () => {
             Pay Now
           </Button>
         </Box>
-      </Box>
+      </Paper>
     </Container>
   );
 };
