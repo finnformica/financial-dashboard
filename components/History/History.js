@@ -7,7 +7,7 @@ import { exampleHistoryData } from "./exampleHistoryData";
 const History = () => {
   const theme = useTheme();
 
-  const gridHeaders = ["Time", "Type", "Price", "Amount", "Completed", "Total"];
+  const gridHeaders = ["Time", "Type", "Price", "Coin", "Amount", "Completed"];
 
   return (
     <Box sx={{ px: 2, py: 1 }}>
@@ -60,17 +60,17 @@ const History = () => {
             </Grid>
             <Grid item xs={1} sx={{ pt: 0 }}>
               <Typography color="text.default" fontSize={14}>
+                {item.coin}
+              </Typography>
+            </Grid>
+            <Grid item xs={1} sx={{ pt: 0 }}>
+              <Typography color="text.default" fontSize={14}>
                 {item.amount}
               </Typography>
             </Grid>
             <Grid item xs={1} sx={{ pt: 0 }}>
               <Typography color="text.default" fontSize={14}>
                 {item.completed}
-              </Typography>
-            </Grid>
-            <Grid item sx={{ pt: 0 }}>
-              <Typography color="text.default" fontSize={14}>
-                {item.total}
               </Typography>
             </Grid>
           </Fragment>
