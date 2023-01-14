@@ -57,6 +57,7 @@ const PaymentPage = () => {
             </Box>
           </Box>
           <Button
+            disabled
             variant="contained"
             size="large"
             sx={{
