@@ -6,7 +6,7 @@ const Summary = () => {
   const theme = useTheme();
 
   return (
-    <Box sx={{ px: 2, pt: 1 }}>
+    <Box sx={{ px: 2, pt: 1, minWidth: "250px" }}>
       <Box sx={{ display: "flex", mb: 2 }}>
         <Typography color="text.default" sx={{ flex: 1 }} variant="h6">
           Trade overview
