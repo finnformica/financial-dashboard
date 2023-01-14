@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { Box, IconButton, Menu, MenuItem, useTheme } from "@mui/material";
 
@@ -11,6 +11,11 @@ const UtilityIcons = ({ setMode, mode }) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const theme = useTheme();
 
+  useEffect(() => {
+    const state = localStorage.getItem("mode");
+    setMode(state ? state : "dark");
+  }, []);
+
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -20,6 +25,7 @@ const UtilityIcons = ({ setMode, mode }) => {
   };
 
   const handleModeToggle = () => {
+    localStorage.setItem("mode", mode === "dark" ? "light" : "dark");
     setMode(mode === "dark" ? "light" : "dark");
   };
 
