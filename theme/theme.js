@@ -12,13 +12,17 @@ const darkTheme = {
     border: "#444",
   },
   success: {
-    main: "#0BBF91",
+    main: "#03D7A0",
   },
   warning: {
-    main: "#AF3957",
+    main: "#F04770",
   },
   text: {
     default: "#FFF",
+  },
+  candlestick: {
+    green: "#03D7A0",
+    red: "#F04770",
   },
 };
 
@@ -43,6 +47,10 @@ const lightTheme = {
   },
   text: {
     default: "#000",
+  },
+  candlestick: {
+    green: "#03D7A0",
+    red: "#F04770",
   },
 };
 
