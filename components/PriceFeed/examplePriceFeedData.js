@@ -4,7 +4,7 @@ export const examplePriceFeedData = [
     ticker: "BTC",
     change: 1314,
     percent: 7.4,
-    price: "18846.88",
+    price: "18,846.88",
   },
   {
     coin: "Ethereum",
