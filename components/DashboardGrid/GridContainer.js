@@ -17,7 +17,7 @@ const GridContainer = styled("div")(({ theme }) => ({
             "history history"
             `,
     gap: theme.spacing(2.5),
-    height: "150vh",
+    height: "155vh",
   },
 
   [theme.breakpoints.up("lg")]: {
