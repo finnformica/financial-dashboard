@@ -6,7 +6,7 @@ import { chartOptions } from "./chartOptions";
 const DashboardChart = () => {
   const theme = useTheme();
   const data = exampleChartData
-    .slice(10, 90)
+    .slice(55, 100)
     .map((item) => [
       new Date(item.Date),
       +item["AAPL.Low"],
