@@ -39,8 +39,6 @@ export default function NavTabs() {
     // update route to reflect page change
     router.push(routes[newValue]);
     setValue(newValue);
-
-    localStorage.setItem("route", newValue);
   };
 
   return (
