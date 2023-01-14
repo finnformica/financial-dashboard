@@ -30,7 +30,9 @@ const RowItem = ({ coin, ticker, percent, price }) => {
             </Typography>
           </>
         )}
-        <Typography color="text.default">${price}</Typography>
+        <Typography color="text.default" fontSize={14}>
+          ${price}
+        </Typography>
       </Box>
 
       <Typography variant="caption" color="grey.500">
