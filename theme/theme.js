@@ -65,9 +65,15 @@ export const getDesignTokens = (mode) => ({
   components: {
     MuiCssBaseline: {
       styleOverrides: {
+        "&::selection": {
+          background: "magenta",
+        },
         body: {
           backgroundColor: mode === "dark" ? "#151517" : "#F6F7FB",
           transition: "all 0.3s ease-in-out",
+          "&::selection": {
+            background: "magenta",
+          },
         },
         div: {
           transition: "all 0.3s ease-in-out",
