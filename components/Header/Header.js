@@ -32,7 +32,7 @@ const Header = ({ setMode, mode }) => {
           minWidth: "680px",
           transition: "all 0.3s ease-in-out",
         }}
-        elevation={0}
+        elevation={mode === "dark" ? 0 : 4}
       >
         <Toolbar sx={{ height: 70 }}>
           <IconButton aria-label="rocket ship logo" sx={{ mt: 0.5 }}>
