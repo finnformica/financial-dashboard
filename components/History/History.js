@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { Box, Typography, IconButton, useTheme, Grid } from "@mui/material";
 import RefreshRoundedIcon from "@mui/icons-material/RefreshRounded";
 import DeleteOutlineRoundedIcon from "@mui/icons-material/DeleteOutlineRounded";
@@ -35,7 +36,7 @@ const History = () => {
         ))}
 
         {exampleHistoryData.map((item, id) => (
-          <>
+          <Fragment key={id}>
             <Grid item xs={1} sx={{ pt: 0 }}>
               <Typography color="text.default" fontSize={14}>
                 {item.time}
@@ -72,7 +73,7 @@ const History = () => {
                 {item.total}
               </Typography>
             </Grid>
-          </>
+          </Fragment>
         ))}
       </Grid>
     </Box>
