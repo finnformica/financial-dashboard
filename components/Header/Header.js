@@ -3,22 +3,14 @@ import {
   Toolbar,
   Typography,
   IconButton,
-  Menu,
-  MenuItem,
   Box,
   useTheme,
 } from "@mui/material";
 import RocketRoundedIcon from "@mui/icons-material/RocketRounded";
-
 import Link from "next/link";
+
 import NavTabs from "./NavTabs";
-
 import UtilityIcons from "./UtilityIcons";
-
-// make tab labels white
-// link toggle behaviour to url
-// store state in localStorage
-// add padding between tabs
 
 const Header = ({ setMode, mode }) => {
   const theme = useTheme();
