@@ -30,6 +30,7 @@ const Header = ({ setMode, mode }) => {
           borderBottom: 1.5,
           borderColor: theme.palette.background.border,
           minWidth: "680px",
+          transition: "all 0.3s ease-in-out",
         }}
         elevation={0}
       >
