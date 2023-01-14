@@ -12,7 +12,9 @@ const Summary = () => {
           Trade overview
         </Typography>
         <IconButton aria-label="refresh price feed" sx={{ p: 0, px: 0.5 }}>
-          <RefreshRoundedIcon sx={{ color: theme.palette.text.default }} />
+          <RefreshRoundedIcon
+            sx={{ color: theme.palette.text.default, opacity: 0.3 }}
+          />
         </IconButton>
       </Box>
       <Box
