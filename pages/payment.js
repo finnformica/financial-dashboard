@@ -1,14 +1,78 @@
-import { Box, Typography, useTheme } from "@mui/material";
+import {
+  Container,
+  Typography,
+  Box,
+  Button,
+  useTheme,
+  TextField,
+} from "@mui/material";
 
 const PaymentPage = () => {
   const theme = useTheme();
 
   return (
-    <Box sx={{ height: "100vh" }}>
-      <Typography color={theme.palette.text.default} variant="h3">
-        Payment
-      </Typography>
-    </Box>
+    <Container
+      fixed
+      sx={{
+        maxWidth: "600px",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "80vh",
+      }}
+    >
+      <Box
+        sx={{
+          p: 4,
+          borderRadius: theme.shape.borderRadius,
+          backgroundColor: theme.palette.background.light,
+          border: `1.5px ${theme.palette.background.border} solid`,
+          height: "500px",
+          width: "500px",
+        }}
+      >
+        <Typography variant="h4" color="text.default">
+          Payment
+        </Typography>
+        <Box sx={{ height: "95%", px: 4, mt: 3 }}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-evenly",
+              height: "60%",
+            }}
+          >
+            <TextField variant="filled" size="small" label="Cardholder name" />
+            <TextField variant="filled" size="small" label="Card number" />
+            <Box sx={{ display: "flex" }}>
+              <TextField
+                sx={{ pr: 2 }}
+                variant="filled"
+                size="small"
+                label="Expiration date"
+              />
+              <TextField width={50} variant="filled" size="small" label="CVV" />
+            </Box>
+          </Box>
+          <Button
+            variant="contained"
+            size="large"
+            sx={{
+              background: "linear-gradient(to right top, #EB4774, #BF48AF)",
+              width: "100%",
+              borderRadius: 2,
+              textTransform: "none",
+              mt: 5,
+              fontSize: 16,
+            }}
+          >
+            Pay Now
+          </Button>
+        </Box>
+      </Box>
+    </Container>
   );
 };
 
