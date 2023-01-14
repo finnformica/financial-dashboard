@@ -32,10 +32,9 @@ const DashboardChart = () => {
       <Chart
         chartType="CandlestickChart"
         width="100%"
-        height="400px"
+        height="450px"
         data={data}
         options={chartOptions(theme, data)}
-        sx={{ transition: "all 0.3s ease-in-out" }}
       />
     </Box>
   );
