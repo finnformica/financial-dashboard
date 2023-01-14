@@ -10,7 +10,7 @@ import React from "react";
 const BuySell = ({ mode }) => {
   return (
     <Box sx={{ p: 2, pt: 1 }}>
-      <Typography variant="h6">
+      <Typography color="text.default" variant="h6">
         {mode === "buy" ? "Buy" : "Sell"} Coins
       </Typography>
       <TextField

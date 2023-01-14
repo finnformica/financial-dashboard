@@ -8,7 +8,7 @@ const Summary = () => {
   return (
     <Box sx={{ px: 2, pt: 1 }}>
       <Box sx={{ display: "flex", mb: 2 }}>
-        <Typography sx={{ flex: 1 }} variant="h6">
+        <Typography color="text.default" sx={{ flex: 1 }} variant="h6">
           Trade overview
         </Typography>
         <IconButton aria-label="refresh price feed" sx={{ p: 0, px: 0.5 }}>

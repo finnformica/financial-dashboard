@@ -42,6 +42,7 @@ const SummarySpinner = ({ mode, value, percent }) => {
 
       {value >= 0 ? (
         <Typography
+          color="text.default"
           sx={{
             position: "absolute",
             top: { xs: 10, lg: 85 },
@@ -52,6 +53,7 @@ const SummarySpinner = ({ mode, value, percent }) => {
         </Typography>
       ) : (
         <Typography
+          color="text.default"
           sx={{
             position: "absolute",
             top: { xs: 10, lg: 85 },

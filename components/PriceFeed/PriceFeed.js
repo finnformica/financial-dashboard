@@ -14,7 +14,9 @@ const RowItem = ({ coin, ticker, percent, price }) => {
           flexDirection: { xs: "column", lg: "row" },
         }}
       >
-        <Typography fontSize={14}>{ticker}</Typography>
+        <Typography color="text.default" fontSize={14}>
+          {ticker}
+        </Typography>
         {percent >= 0 ? (
           <>
             <Typography fontSize={14} color="success.main">
@@ -28,7 +30,7 @@ const RowItem = ({ coin, ticker, percent, price }) => {
             </Typography>
           </>
         )}
-        <Typography>${price}</Typography>
+        <Typography color="text.default">${price}</Typography>
       </Box>
 
       <Typography variant="caption" color="grey.500">
@@ -43,7 +45,7 @@ const PriceFeed = () => {
   return (
     <Box sx={{ p: 2, pt: 1 }}>
       <Box sx={{ display: "flex", mb: 2 }}>
-        <Typography variant="h6" sx={{ flex: 1 }}>
+        <Typography color="text.default" variant="h6" sx={{ flex: 1 }}>
           Coins
         </Typography>
         <IconButton aria-label="refresh price feed" sx={{ p: 0, px: 0.5 }}>
