@@ -1,0 +1,42 @@
+export const exampleHistoryData = [
+  {
+    time: "5:15 am",
+    type: "buy",
+    price: 4667.74,
+    amount: 3777.332,
+    completed: 435.23,
+    total: 500,
+  },
+  {
+    time: "5:15 am",
+    type: "sell",
+    price: 4667.74,
+    amount: 3777.332,
+    completed: 435.23,
+    total: 500,
+  },
+  {
+    time: "5:15 am",
+    type: "buy",
+    price: 4667.74,
+    amount: 3777.332,
+    completed: 435.23,
+    total: 500,
+  },
+  {
+    time: "5:15 am",
+    type: "sell",
+    price: 4667.74,
+    amount: 3777.332,
+    completed: 435.23,
+    total: 500,
+  },
+  {
+    time: "5:15 am",
+    type: "buy",
+    price: 4667.74,
+    amount: 3777.332,
+    completed: 435.23,
+    total: 500,
+  },
+];

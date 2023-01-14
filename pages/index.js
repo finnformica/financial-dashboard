@@ -4,6 +4,7 @@ import Banner from "../components/Banner/Banner";
 import BuySell from "../components/BuySell/BuySell";
 import PriceFeed from "../components/PriceFeed/PriceFeed";
 import Summary from "../components/Summary/Summary";
+import History from "../components/History/History";
 
 export default function Home() {
   const gridAreas = [
@@ -13,7 +14,7 @@ export default function Home() {
     { name: "sell", element: <BuySell mode="sell" /> },
     { name: "prices", element: <PriceFeed /> },
     { name: "summary", element: <Summary /> },
-    { name: "history", element: <div></div> },
+    { name: "history", element: <History /> },
   ];
   return (
     <>
